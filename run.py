@@ -27,8 +27,23 @@ def create_ships(board):
             ship_row, ship_column = randint(0,7), randint(0,7)
         board[ship_row] [ship_column] = 'X'
 
+
+"""
+Ask the player where they want to place their battleships.
+If not in a valid row or column, get error message to please enter a valid row and column.
+Convert the letters to numbers to pass it the correct column.
+"""
 def get_ship_location():
-    pass
+    row = input('Please enter a ship row 1-8')
+    while row not in '12345678':
+        print('Please enter a valid row')
+        row = input('Please enter a ship row 1-8')
+    column = input('Please enter a ship column A-H').upper()
+    while column not in 'ABCDEFGH':
+        print('Please enter a valid column')
+        column = input('Please enter a ship column A-H').upper()
+    return int(row) - 1, letters_to_numbers[column]
+
 
 def count_hit_ships():
     pass
