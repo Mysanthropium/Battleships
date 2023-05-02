@@ -5,6 +5,7 @@ GUESS_BOARD = [[''] * for x in range(8)]
 
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
+
 """
 Define the board visuals, creating seperators through each iteration.
 """
@@ -15,6 +16,7 @@ def print_board(board):
     for row in board():
         print("%d|%s" % (row_number, "|".join(row)))
         row_number += 1
+
 
 """
 Define a function to let the computer create ships randomly over the board.
@@ -45,11 +47,22 @@ def get_ship_location():
     return int(row) - 1, letters_to_numbers[column]
 
 
-def count_hit_ships():
-    pass
+"""
+Loop through each row and column to check if there's a ship on the board.
+"""
+def count_hit_ships(board):
+    count = 0
+    for row in board:
+        for column in row:
+            if column == 'X':
+                count += 1
+    return count
 
-create_ships()
+
+create_ships(HIDDEN_BOARD)
 turns = 10
+print_board(HIDDEN_BOARD)
+print_board(GUESS_BOARD)
 #while turns > 0:
 
 
