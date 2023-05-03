@@ -95,29 +95,40 @@ def count_hit_ships(board):
 
 
 clear_screen()  # Clears the screen depending on the players operating system.
+
+def start_screen():
+    print(
+        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\nGuess a battleship location to strike!'
+        )
+    print(
+        'Rows 1-8: 8\nColumns A-H: 8\nTotal ships: 5'
+        )
+    print(
+        '\n--------------------------------------'
+        )
+
+start_screen()
 create_ships(HIDDEN_BOARD)
-print_board(HIDDEN_BOARD)
 turns = 10
 while turns > 0:
     print(
-        '\nGuess a battleship location to strike!\nRules: You have 10 tries to sink all 5 battleships on the board to win.\n\nGood Luck!\n'
+        '\nTries left: '+ str(turns) +'\n\nGood Luck!\n'
     )
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print("You've already guessed that")
     elif HIDDEN_BOARD[row][column] == 'X':
-        print('\nBOOM! You hit a battleship!')
+        print('\n\nYou HIT!\n--------------------------------------')
         GUESS_BOARD[row][column] = 'X'
         turns -= 1
     else:
-        print('\nYou missed!')
+        print('\n\nYou MISS!\n--------------------------------------')
         GUESS_BOARD[row][column] = '-'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
         print('\nCongratulations! You sunk all the battleships!')
         break  # Preventing the game to continue running
-    print('You have ' + str(turns) + ' out of 10 tries left!')
     if turns == 0:
-        print('You ran out of turns and the game is over...')
+        print('You ran out of turns and the game is over...\n')
         break  # Preventing the game to continue running
