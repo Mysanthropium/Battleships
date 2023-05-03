@@ -132,7 +132,7 @@ Start screen to show name of the game and settings.
 
 def start_screen():
     print(
-        '\n!!!!!!!!!!!!!!!! BATTLESHIPS !!!!!!!!!!!!!!!!'
+        '\n!!!!!!!!!!!! BATTLESHIPS !!!!!!!!!!!!!'
         )
     print(BOAT)
     print(
