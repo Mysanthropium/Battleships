@@ -32,6 +32,8 @@ letters_to_numbers = {
 """
 Clear the screen based on the operating system to only show the game itself
 """
+
+
 def clear_screen():
     if sys.platform.startswith('win'):
         os.system('cls')
@@ -42,6 +44,8 @@ def clear_screen():
 """
 Defining the board row and columns, creating seperators through each iteration.
 """
+
+
 def print_board(board):
     print('  A B C D E F G H')
     print('  -+-+-+-+-+-+-+-')
@@ -57,6 +61,8 @@ def print_board(board):
 Define a function to let the computer create ships randomly over the board.
 Check if X exists, or check X.
 """
+
+
 def create_ships(board):
     for ship in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
@@ -70,6 +76,8 @@ Ask the player where they want to place their battleships.
 If not in a valid row or column, get error message.
 Convert the letters to numbers to pass it the correct column.
 """
+
+
 def get_ship_location():
     row = input('Please enter a ship row 1-8:\n')
     while row not in '12345678':
@@ -85,6 +93,8 @@ def get_ship_location():
 """
 Loop through each row and column to check if there's a ship on the board.
 """
+
+
 def count_hit_ships(board):
     count = 0
     for row in board:
@@ -99,9 +109,14 @@ clear_screen()  # Clears the screen depending on the players operating system.
 """
 Start screen to show name of the game and settings.
 """
+
+
 def start_screen():
     print(
-        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\nGuess a battleship location to strike!\n'
+        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\n'
+        )
+    print(
+        'Guess a battleship location to strike!\n'
         )
     print(
         'Rows 1-8: 8\nColumns A-H: 8\nTotal ships: 5'
@@ -116,23 +131,23 @@ create_ships(HIDDEN_BOARD)
 turns = 10
 while turns > 0:
     print(
-        '\nTries left: '+ str(turns) +'\n\nGood Luck!\n'
+        '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
     )
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print("You've already guessed that")
     elif HIDDEN_BOARD[row][column] == 'X':
-        print('\n\nYou HIT!\n--------------------------------------')
+        print('\nYou HIT!\n--------------------------------------')
         GUESS_BOARD[row][column] = 'X'
         turns -= 1
     else:
-        print('\n\nYou MISS!\n--------------------------------------')
+        print('\nYou MISS!\n--------------------------------------')
         GUESS_BOARD[row][column] = '-'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
-        print('\nCongratulations! You sunk all the battleships!')
+        print('\nCongratulations! You sunk all the battleships!\n')
         break  # Preventing the game to continue running
     if turns == 0:
-        print('You ran out of turns and the game is over...\n')
+        print('\nYou ran out of turns and the game is over...\n')
         break  # Preventing the game to continue running
