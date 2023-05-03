@@ -96,9 +96,12 @@ def count_hit_ships(board):
 
 clear_screen()  # Clears the screen depending on the players operating system.
 
+"""
+Start screen to show name of the game and settings.
+"""
 def start_screen():
     print(
-        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\nGuess a battleship location to strike!'
+        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\nGuess a battleship location to strike!\n'
         )
     print(
         'Rows 1-8: 8\nColumns A-H: 8\nTotal ships: 5'
@@ -106,6 +109,7 @@ def start_screen():
     print(
         '\n--------------------------------------'
         )
+
 
 start_screen()
 create_ships(HIDDEN_BOARD)
