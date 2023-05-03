@@ -131,7 +131,9 @@ Start screen to show name of the game and settings.
 
 
 def start_screen():
-    print(LOGO)
+    print(
+        '\n!!!!!!!!!!!!!!!! BATTLESHIPS !!!!!!!!!!!!!!!!'
+        )
     print(BOAT)
     print(
         'Guess a battleship location to strike!\n'
