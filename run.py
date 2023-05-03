@@ -9,6 +9,14 @@ import sys
 import os
 
 
+BOAT = """
+                __/___            
+          _____/______|           
+  _______/_____\_______\_____     
+  \              < < <       |    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""
+
 """
 Board for holding the ship locations.
 """
@@ -113,8 +121,9 @@ Start screen to show name of the game and settings.
 
 def start_screen():
     print(
-        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!\n\n'
+        '!!!!!!!!!! BATTLESHIPS !!!!!!!!!!'
         )
+    print(BOAT)
     print(
         'Guess a battleship location to strike!\n'
         )
