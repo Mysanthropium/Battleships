@@ -47,7 +47,8 @@
 ![hitall](assets/images/hitall.jpg)
 
 ### Implemented Features
-* The user is able to start over with 10 more tries in the same game.
+* The user is able to try again with 10 more tries in the same game.
+* The user will be told if they enter wrong characters in row and column.
 
 ### How to play
 1. Choose wether or not you want to play enter 'y'.
@@ -78,12 +79,48 @@
 ### Git
 * Used for version control
 
-## Testing
+### Modules used
+* 'random' was used to randomize ship placements.
+* 'sys and os' was used to clear terminal.
 
+## Testing
+* The code is tested using [PEP8](https://pep8ci.herokuapp.com/)
+   * With the only errors being in the ascii art boat image.
+
+![PEP8](assets/images/pep8.jpg)
+
+### Bugs and issues
+* There's an issue in the ascii art, resulting in 'errors' in PEP8.
 
 ## Deployment
+### Version Control
+Using GitPod to push code to main repository in GitHub.
+* In GitPod terminal use "git add ." to add the changes.
+* Then use "git commit -m "push comment"" to make a comment to your push.
+* Finally use "git push" to push the update to the repository on GitHub.
+
+### App deployment
+Using Heroku for app deployment.
+* Create a new app on your dashboard.
+* Navigate to "Settings" in your new app.
+* Using the "Config Vars" add PORT to KEY, and 8000 to its VALUE.
+* Install the buildpacks needed for this project. In this order!
+   * Python
+   * node.js
+* Then navigate to deploy section and choose GitHub.
+* Connect to your GitHub repository by searching for your repository name.
+* Using "automatic" deployment, deploys your commits to Heroku.
+* Now we can click the "App" button in the top right corner to run our application.
 
 ## Credits
+### [YouTube](https://www.youtube.com/)
+* For having great learning content.
+
+### [Python](python.org)
+* For beginner friendly tutorials.
+
+### [GitHub](docs.github.com)
+* For learning how to document a nice looking readme.
 
 ## Contents and resources
 
