@@ -21,13 +21,6 @@ BOAT = """
 """
 Board for holding the ship locations.
 """
-HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
-
-
-"""
-Playing board to show hits and misses.
-"""
-GUESS_BOARD = [[' '] * 8 for x in range(8)]
 
 
 """
@@ -117,8 +110,10 @@ clear_screen()  # Clears the screen depending on the players operating system.
 
 
 def start_game():
+    HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
+    GUESS_BOARD = [[' '] * 8 for x in range(8)]
     create_ships(HIDDEN_BOARD)
-    turns = 10
+    turns = 3
     while turns > 0:
         print(
             '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
