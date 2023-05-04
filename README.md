@@ -123,8 +123,24 @@ Using Heroku for app deployment.
 * For learning how to document a nice looking readme.
 
 ## Contents and resources
+### [YouTube](https://www.youtube.com/)
+* Can't show YouTube enough appreciation.
+
+### [ASCII Art](https://www.asciiart.eu/)
+* For creating my boat art.
+
+### Knowledge Mavens
+* Used [this](https://github.com/gbrough/battleship/blob/main/single_player.py) repository to build the functions in the game.
+
+### Code Institute
+* This project is a part of the course content.
 
 ## Acknowledgements
+### Alan Bushell
+* My cohort fascilitator being very helpful every week at our weekly standup meeting.
+
+### Adeye Adegbenga
+* My mentor at Code Institute, giving me good and helpful feedback.
 
 
 [Back to Top of page](#battleships)
