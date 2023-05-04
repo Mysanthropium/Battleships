@@ -26,7 +26,7 @@
 
 ## Game Flow
 > When the game is run, the user is presented with a starting screen:
-![Startscreen](assets/images/startscreen.jpg)
+![Startscreen](assets/images/startscreen1.jpg)
 
 > When the user has typed 'y' the game starts:
 ![Gamestart](assets/images/startgame.jpg)
