@@ -46,21 +46,40 @@
 > When the user hits all 5 battleships, gets message:
 ![hitall](assets/images/hitall.jpg)
 
->### Implemented Features
->* The user is able to start over with 10 more tries in the same game.
+### Implemented Features
+* The user is able to start over with 10 more tries in the same game.
 
->### How to play
->1. Choose wether or not you want to play enter 'y'.
->2. Choose a row between 1-8.
->3. Choose a column between A-H.
->4. Try to hit all 5 battleships on the board within 10 tries.
->5. If you dont hit all 5, you can enter 'y' to get 10 more tries.
+### How to play
+1. Choose wether or not you want to play enter 'y'.
+2. Choose a row between 1-8.
+3. Choose a column between A-H.
+4. Try to hit all 5 battleships on the board within 10 tries.
+5. If you dont hit all 5, you can enter 'y' to get 10 more tries.
 
 ### Features left to implement
+* Let the player choose a grid size and number of ships.
+* Play against the computer.
+* Add different ship sizes.
+* Let the player place their own ships.
 
 ## Technology Used
+### Python
+* To create the application
+
+### Heroku
+* For deployment and hosting of the application
+
+### GitHub
+* Used to store code
+
+### Gitpod
+* The IDE of choice for the application
+
+### Git
+* Used for version control
 
 ## Testing
+
 
 ## Deployment
 
