@@ -118,7 +118,7 @@ clear_screen()  # Clears the screen depending on the players operating system.
 
 def start_game():
     create_ships(HIDDEN_BOARD)
-    turns = 3
+    turns = 10
     while turns > 0:
         print(
             '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
