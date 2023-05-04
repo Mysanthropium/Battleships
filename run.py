@@ -88,13 +88,13 @@ Convert the letters to numbers to pass it the correct column.
 
 
 def get_ship_location():
-    row = input('Please enter a ship row 1-8:\n')
+    row = input('\nPlease enter a ship row 1-8:\n')
     while row not in '12345678':
-        print('Please enter a valid row')
+        print('Please enter a valid row\n')
         row = input('Please enter a ship row 1-8:\n')
     column = input('Please enter a ship column A-H:\n').upper()
     while column not in 'ABCDEFGH':
-        print('Please enter a valid column')
+        print('Please enter a valid column\n')
         column = input('Please enter a ship column A-H:\n').upper()
     return int(row) - 1, letters_to_numbers[column]
 
@@ -115,6 +115,46 @@ def count_hit_ships(board):
 
 clear_screen()  # Clears the screen depending on the players operating system.
 
+
+def start_game():
+    create_ships(HIDDEN_BOARD)
+    turns = 3
+    while turns > 0:
+        print(
+            '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
+        )
+        print_board(GUESS_BOARD)
+        row, column = get_ship_location()
+        if GUESS_BOARD[row][column] == '-':
+            print("You've already guessed that")
+        elif HIDDEN_BOARD[row][column] == 'X':
+            print('\n--------------------------------------\nYou HIT!')
+            GUESS_BOARD[row][column] = 'X'
+            turns -= 1
+        else:
+            print('\n--------------------------------------\nYou MISS!')
+            GUESS_BOARD[row][column] = '-'
+            turns -= 1
+        if count_hit_ships(GUESS_BOARD) == 5:
+            print('\nCongratulations! You sunk all the battleships!\n')
+            play_again = input('Play again? y/n:\n')
+            if play_again:
+                clear_screen()
+                start_screen()
+                create_ships(HIDDEN_BOARD)
+                turns = 10
+        if turns == 0:
+            print('\nYou ran out of turns and the game is over...\n')
+            play_again = input('Try again with 10 new tries? y/n:\n')
+            if play_again:
+                clear_screen()
+                start_screen()
+                create_ships(HIDDEN_BOARD)
+                turns = 10
+            else:
+                break  # Preventing the game to continue running
+
+
 """
 Start screen to show name of the game and settings.
 """
@@ -134,30 +174,9 @@ def start_screen():
     print(
         '\n--------------------------------------'
         )
+    game_on = input('Type y to start game:\n')
+    if game_on == 'y':
+        start_game()
 
 
 start_screen()
-create_ships(HIDDEN_BOARD)
-turns = 10
-while turns > 0:
-    print(
-        '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
-    )
-    print_board(GUESS_BOARD)
-    row, column = get_ship_location()
-    if GUESS_BOARD[row][column] == '-':
-        print("You've already guessed that")
-    elif HIDDEN_BOARD[row][column] == 'X':
-        print('\nYou HIT!\n--------------------------------------')
-        GUESS_BOARD[row][column] = 'X'
-        turns -= 1
-    else:
-        print('\nYou MISS!\n--------------------------------------')
-        GUESS_BOARD[row][column] = '-'
-        turns -= 1
-    if count_hit_ships(GUESS_BOARD) == 5:
-        print('\nCongratulations! You sunk all the battleships!\n')
-        break  # Preventing the game to continue running
-    if turns == 0:
-        print('\nYou ran out of turns and the game is over...\n')
-        break  # Preventing the game to continue running
