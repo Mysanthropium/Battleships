@@ -22,7 +22,7 @@
 7. [Deployment](##Deployment)
 8. [Credits](##Credits)
 9. [Contents and resources](##Contents-and-resources)
-10. [Acknowledgements](##Acknowledgements)
+10. [Acknowledgements](#Acknowledgements)
 
 
 ## Game Flow
