@@ -164,7 +164,7 @@ def start_screen():
         'Guess a battleship location to strike!\n'
         )
     print(
-        'Rows 1-8: 8\nColumns A-H: 8\nTotal ships: 5'
+        'Rows 1-8:\nColumns A-H:\nTotal ships: 5'
         )
     print(
         '\n- = MISS'
