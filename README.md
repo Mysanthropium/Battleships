@@ -5,11 +5,11 @@
 > If the player hits all 5, congratulations!
 > If not, you get the opportunity to try again with another 10 tries.
 
-## - By Rasmus Persson
+### - By Rasmus Persson
 
-## [Live Site](https://my-battleship-game1.herokuapp.com/)
+### [Live Site](https://my-battleship-game1.herokuapp.com/)
 
-## [Repository](https://github.com/Mysanthropium/Battleships)
+### [Repository](https://github.com/Mysanthropium/Battleships)
 
 ## Table of contents
 
