@@ -31,7 +31,7 @@
 > When the user has typed 'y' the game starts:
 ![Gamestart](assets/images/startgame.jpg)
 
-> The user gets to choose row and column, when they miss:
+> The user gets to choose row and column. And when they miss:
 ![Youmiss](assets/images/youmiss.jpg)
 
 > When the user hits:

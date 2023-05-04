@@ -172,6 +172,12 @@ def start_screen():
         'Rows 1-8: 8\nColumns A-H: 8\nTotal ships: 5'
         )
     print(
+        '\n- = MISS'
+        )
+    print(
+        'X = HIT'
+        )
+    print(
         '\n--------------------------------------'
         )
     game_on = input('Type y to start game:\n')
