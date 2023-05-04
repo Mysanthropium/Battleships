@@ -113,7 +113,7 @@ def start_game():
     HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
     GUESS_BOARD = [[' '] * 8 for x in range(8)]
     create_ships(HIDDEN_BOARD)
-    turns = 3
+    turns = 10
     while turns > 0:
         print(
             '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
@@ -132,16 +132,16 @@ def start_game():
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
             print('\nCongratulations! You sunk all the battleships!\n')
-            play_again = input('Play again? y/n:\n')
-            if play_again:
+            play_again = input("Play again? Type 'y':\n")
+            if play_again == 'y':
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
                 turns = 10
         if turns == 0:
             print('\nYou ran out of turns and the game is over...\n')
-            play_again = input('Try again with 10 new tries? y/n:\n')
-            if play_again:
+            play_again = input("Play again? Type 'y':\n")
+            if play_again == 'y':
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
@@ -161,10 +161,19 @@ def start_screen():
         )
     print(BOAT)
     print(
+        'How to play:'
+        )
+    print(
+        'You first get to choose a row between 1-8, then a column between A-H.'
+        )
+    print(
+        'There is 5 hidden ships over the board, you got 10 tries to hit them all!\n'
+        )
+    print(
         'Guess a battleship location to strike!\n'
         )
     print(
-        'Rows 1-8:\nColumns A-H:\nTotal ships: 5'
+        'Rows 1-8\nColumns A-H\nTotal ships: 5'
         )
     print(
         '\n- = MISS'
@@ -175,9 +184,13 @@ def start_screen():
     print(
         '\n--------------------------------------'
         )
-    game_on = input('Type y to start game:\n')
-    if game_on == 'y':
+    game_on = input("Type 'a' to start game:\n")
+    if game_on == 'a':
         start_game()
+    else:
+        print('Invalid input')
+        clear_screen()
+        start_screen()
 
 
 start_screen()
