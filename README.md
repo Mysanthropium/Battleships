@@ -13,16 +13,16 @@
 
 ## Table of contents
 
-1. [Game Flow](Game-Flow)
-2. [Implemented Features](Implemented-Features)
-3. [How to play](How-to-play)
-4. [Features left to implement](Features-left-to-implement)
-5. [Technology Used](Technology-Used)
-6. [Testing](Testing)
-7. [Deployment](Deployment)
-8. [Credits](Credits)
-9. [Contents and resources](Contents-and-resources)
-10. [Acknowledgements](Acknowledgements)
+1. [Game Flow](##Game-Flow)
+2. [Implemented Features](###Implemented-Features)
+3. [How to play](###How-to-play)
+4. [Features left to implement](###Features-left-to-implement)
+5. [Technology Used](##Technology-Used)
+6. [Testing](##Testing)
+7. [Deployment](##Deployment)
+8. [Credits](##Credits)
+9. [Contents and resources](##Contents-and-resources)
+10. [Acknowledgements](##Acknowledgements)
 
 
 ## Game Flow
