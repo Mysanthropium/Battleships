@@ -24,10 +24,30 @@
 9. [Contents and resources](#Contents-and-resources)
 10. [Acknowledgements](#Acknowledgements)
 
-
 ## Game Flow
+> When the game is run, the user is presented with a starting screen:
+![Startscreen](assets/images/startscreen.jpg)
+
+> When the user has typed 'y' the game starts:
+![Gamestart](assets/images/startgame.jpg)
+
+> The user gets to choose row and column, when they miss:
+![Youmiss](assets/images/youmiss.jpg)
+
+> When the user hits:
+![youhit](assets/images/youhit.jpg)
+
+> The user will also be able to track their tries left after each turn:
+![triesleft](assets/images/triesleft.jpg)
+
+> When the user run out of tries they get this message:
+![runout](assets/images/runout.jpg)
+
+> When the user hits all 5 battleships, gets message:
+![hitall](assets/images/hitall.jpg)
 
 ### Implemented Features
+* The user is able to start over with 10 more tries in the same game.
 
 ### How to play
 
@@ -45,5 +65,7 @@
 
 ## Acknowledgements
 
+
+[Back to Top of page](#battleships)
 
 
