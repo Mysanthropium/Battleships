@@ -132,7 +132,7 @@ def start_game():
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
             print('\nCongratulations! You sunk all the battleships!\n')
-            play_again = input("Play again? Type 'y':\n")
+            play_again = input("Play again? Type any key:\n")
             if play_again == 'y':
                 clear_screen()
                 start_screen()

@@ -3,7 +3,7 @@
 ## A Python text-based battleships game
 > This is a single-player battleships game, initially the player gets 10 tries to hit all 5 ships.
 > If the player hits all 5, congratulations!
-> If not, you get the opportunity to try again with another 10 tries.
+> If not, you get the opportunity to try again.
 
 ### - By Rasmus Persson
 
@@ -26,9 +26,9 @@
 
 ## Game Flow
 > When the game is run, the user is presented with a starting screen:
-![Startscreen](assets/images/startscreen1.jpg)
+![Startscreen](assets/images/startscreen2.jpg)
 
-> When the user has typed 'y' the game starts:
+> When the user has typed 'a' the game starts:
 ![Gamestart](assets/images/startgame.jpg)
 
 > The user gets to choose row and column. And when they miss:
@@ -41,21 +41,21 @@
 ![triesleft](assets/images/triesleft.jpg)
 
 > When the user run out of tries they get this message:
-![runout](assets/images/runout.jpg)
+![runout](assets/images/runout1.jpg)
 
 > When the user hits all 5 battleships, gets message:
 ![hitall](assets/images/hitall.jpg)
 
 ### Implemented Features
-* The user is able to try again with 10 more tries in the same game.
+* The user is able to play again at the end of the game.
 * The user will be told if they enter wrong characters in row and column.
 
 ### How to play
-1. Choose wether or not you want to play enter 'y'.
+1. Choose wether or not you want to play enter 'a'.
 2. Choose a row between 1-8.
 3. Choose a column between A-H.
 4. Try to hit all 5 battleships on the board within 10 tries.
-5. If you dont hit all 5, you can enter 'y' to get 10 more tries.
+5. At the end of game you get to choose if you want to play again.
 
 ### Features left to implement
 * Let the player choose a grid size and number of ships.
@@ -85,12 +85,12 @@
 
 ## Testing
 * The code is tested using [PEP8](https://pep8ci.herokuapp.com/)
-   * With the only errors being in the ascii art boat image.
+   * With the only warnings being in the ascii art boat image.
 
 ![PEP8](assets/images/pep8.jpg)
 
 ### Bugs and issues
-* There's an issue in the ascii art, resulting in 'errors' in PEP8.
+* There's an issue in the ascii art, resulting in warnings in PEP8.
 
 ## Deployment
 ### Version Control
