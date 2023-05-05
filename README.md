@@ -26,10 +26,10 @@
 
 ## Game Flow
 > When the game is run, the user is presented with a starting screen:
-![Startscreen](assets/images/startscreen2.jpg)
+![Startscreen](assets/images/startscreen3.jpg)
 
 > When the user has typed 'a' the game starts:
-![Gamestart](assets/images/startgame.jpg)
+![Gamestart](assets/images/triesleft1.jpg)
 
 > The user gets to choose row and column. And when they miss:
 ![Youmiss](assets/images/youmiss.jpg)
@@ -91,6 +91,7 @@
 
 ### Bugs and issues
 * There's an issue in the ascii art, resulting in warnings in PEP8.
+* Found an error when pressing 'Enter' when asked for column.
 
 ## Deployment
 ### Version Control
