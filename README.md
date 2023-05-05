@@ -44,7 +44,7 @@
 ![runout](assets/images/runout1.jpg)
 
 > When the user hits all 5 battleships, gets message:
-![hitall](assets/images/hitall.jpg)
+![hitall](assets/images/hitall1.jpg)
 
 ### Implemented Features
 * The user is able to play again at the end of the game.

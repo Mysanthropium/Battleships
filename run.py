@@ -113,7 +113,6 @@ def start_game():
     HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
     GUESS_BOARD = [[' '] * 8 for x in range(8)]
     create_ships(HIDDEN_BOARD)
-    print_board(HIDDEN_BOARD)
     turns = 10
     while turns > 0:
         print(
@@ -133,15 +132,7 @@ def start_game():
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
             print('\nCongratulations! You sunk all the battleships!\n')
-            play_again = input("Play again? Type any key:\n")
-            if play_again == 'y':
-                clear_screen()
-                start_screen()
-                create_ships(HIDDEN_BOARD)
-                turns = 10
-        if turns == 0:
-            print('\nYou ran out of turns and the game is over...\n')
-            play_again = input("Play again? Type any key:\n")
+            play_again = input("Play again? Type 'y':\n")
             if play_again == 'y':
                 clear_screen()
                 start_screen()
@@ -149,8 +140,20 @@ def start_game():
                 turns = 10
             else:
                 clear_screen()
+                print('Thanks for playing!')
+        if turns == 0:
+            print('\nYou ran out of turns and the game is over...\n')
+            play_again = input("Play again? Type 'y':\n")
+            if play_again == 'y':
+                clear_screen()
                 start_screen()
-                break  # Preventing the game to continue running
+                create_ships(HIDDEN_BOARD)
+                turns = 10
+            else:
+                clear_screen()
+                print('Thanks for playing!')
+                
+                
 
 
 """
