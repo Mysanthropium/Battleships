@@ -1,7 +1,7 @@
 # Battleships
 
 ## A Python text-based battleships game
-> This is a single-player battleships game, initially the player gets 10 tries to hit all 5 ships.
+> This is a single-player battleships game, initially the player gets 15 tries to hit all 5 ships.
 > If the player hits all 5, congratulations!
 > If not, you get the opportunity to try again.
 
@@ -41,10 +41,10 @@
 ![triesleft](assets/images/triesleft.jpg)
 
 > When the user run out of tries they get this message:
-![runout](assets/images/runout1.jpg)
+![runout](assets/images/runout2.jpg)
 
 > When the user hits all 5 battleships, gets message:
-![hitall](assets/images/hitall1.jpg)
+![hitall](assets/images/hitall.jpg)
 
 ### Implemented Features
 * The user is able to play again at the end of the game.
@@ -54,7 +54,7 @@
 1. Choose wether or not you want to play enter 'a'.
 2. Choose a row between 1-8.
 3. Choose a column between A-H.
-4. Try to hit all 5 battleships on the board within 10 tries.
+4. Try to hit all 5 battleships on the board within 15 tries.
 5. At the end of game you get to choose if you want to play again.
 
 ### Features left to implement

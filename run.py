@@ -113,7 +113,7 @@ def start_game():
     HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
     GUESS_BOARD = [[' '] * 8 for x in range(8)]
     create_ships(HIDDEN_BOARD)
-    turns = 10
+    turns = 15
     while turns > 0:
         print(
             '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
@@ -137,7 +137,7 @@ def start_game():
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
-                turns = 10
+                turns = 15
             else:
                 clear_screen()
                 print('Thanks for playing!')
@@ -148,12 +148,10 @@ def start_game():
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
-                turns = 10
+                turns = 15
             else:
                 clear_screen()
                 print('Thanks for playing!')
-                
-                
 
 
 """
@@ -173,7 +171,7 @@ def start_screen():
         'You first get to choose a row between 1-8, then a column between A-H.'
         )
     print(
-        'There is 5 hidden ships over the board, you got 10 tries to hit them all!\n'
+        'There is 5 hidden ships, you got 15 tries to hit them all!\n'
         )
     print(
         'Guess a battleship location to strike!\n'
