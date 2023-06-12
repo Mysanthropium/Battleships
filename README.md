@@ -89,9 +89,14 @@
 
 ![PEP8](assets/images/pep8.jpg)
 
+* Manual testing:
+   * Test start game function so it only accepts letter 'a'.
+   * Test enter ship row so it only accepts the correct values, else it lets you know and try again.
+   * Test enter ship column so it only accepts the correct characters, else it lets you know and try again.
+   * Test the try again function so it only accepts the letter 'y', else sends message 'Thank you for playing!'.
+
 ### Bugs and issues
 * There's an issue in the ascii art, resulting in warnings in PEP8.
-* Found an error when pressing 'Enter' when asked for column.
 
 ## Deployment
 ### Version Control
