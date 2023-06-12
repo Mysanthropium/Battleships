@@ -81,15 +81,27 @@ Convert the letters to numbers to pass it the correct column.
 
 
 def get_ship_location():
-    row = input('\nPlease enter a ship row 1-8:\n')
-    while row not in '1, 2, 3, 4, 5, 6, 7, 8':
-        print('Please enter a valid row\n')
-        row = input('Please enter a ship row 1-8:\n')
-    column = input('Please enter a ship column A-H:\n').upper()
-    while column not in 'A, B, C, D, E, F, G, H':
-        print('Please enter a valid column\n')
-        column = input('Please enter a ship column A-H:\n').upper()
-    return int(row) - 1, letters_to_numbers[column]
+    while True:
+        try: 
+            row = input("Please enter a ship row 1-8:\n")
+            if row in '1, 2, 3, 4, 5, 6, 7, 8':
+                row = int(row) - 1
+                break
+            else:
+                print('Enter a valid row between 1-8')
+        except ValueError:
+            print('Enter a valid row between 1-8')
+    while True:
+        try: 
+            column = input("Please enter a ship column A-H:\n").upper()
+            if column in 'A, B, C, D, E, F, G, H':
+                column = letters_to_numbers[column]
+                break
+            else:
+                print('Enter a valid letter between A-H')
+        except KeyError:
+            print('Enter a valid letter between A-H')
+    return row, column
 
 
 """
