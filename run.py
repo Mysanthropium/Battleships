@@ -82,7 +82,7 @@ Convert the letters to numbers to pass it the correct column.
 
 def get_ship_location():
     while True:
-        try: 
+        try:
             row = input("Please enter a ship row 1-8:\n")
             if row in '1, 2, 3, 4, 5, 6, 7, 8':
                 row = int(row) - 1
@@ -92,7 +92,7 @@ def get_ship_location():
         except ValueError:
             print('Enter a valid row between 1-8')
     while True:
-        try: 
+        try:
             column = input("Please enter a ship column A-H:\n").upper()
             if column in 'A, B, C, D, E, F, G, H':
                 column = letters_to_numbers[column]
