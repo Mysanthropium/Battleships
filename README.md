@@ -92,7 +92,11 @@
 * Manual testing:
    * Test start game function so it only accepts letter 'a'.
    * Test enter ship row so it only accepts the correct values, else it lets you know and try again.
+   ![VALIDROW](assets/images/validrow.jpg)
+
    * Test enter ship column so it only accepts the correct characters, else it lets you know and try again.
+   ![VALIDCOLUMN](assets/images/validcolumn.jpg)
+   
    * Test the try again function so it only accepts the letter 'y', else sends message 'Thank you for playing!'.
 
 ### Bugs and issues
