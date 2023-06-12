@@ -125,7 +125,7 @@ def start_game():
     HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
     GUESS_BOARD = [[' '] * 8 for x in range(8)]
     create_ships(HIDDEN_BOARD)
-    turns = 15
+    turns = 3
     while turns > 0:
         print(
             '\nTries left: ' + str(turns) + '\n\nGood Luck!\n'
@@ -149,7 +149,6 @@ def start_game():
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
-                turns = 15
             else:
                 clear_screen()
                 print('Thanks for playing!')
@@ -160,7 +159,6 @@ def start_game():
                 clear_screen()
                 start_screen()
                 create_ships(HIDDEN_BOARD)
-                turns = 15
             else:
                 clear_screen()
                 print('Thanks for playing!')
